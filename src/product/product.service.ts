@@ -15,7 +15,7 @@ export class ProductService {
     return allProducts;
   }
 
-  async create(product: Product): Promise<Product> {
+  async addNewProduct(product: Product): Promise<Product> {
     const newProduct = await this.productsModel.create(product);
     return newProduct;
   }
@@ -30,4 +30,7 @@ export class ProductService {
     return product;
   }
 
+  async deleteById(id: string): Promise<Product> {
+    return await this.productsModel.findByIdAndDelete(id);
+  }
 }

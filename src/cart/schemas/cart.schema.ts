@@ -5,7 +5,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 })
 
 
-export class Product {
+export class Cart {
   @Prop()
   imageUrl: string;
 
@@ -15,8 +15,9 @@ export class Product {
   @Prop({ required: true })
   price: number;
 
-  // @Prop()
-  // slug: string;
+
+  @Prop({ required: true })
+  quantity: number;
 
   // @Prop({ required: true })
   // discount_startDate: object;
@@ -25,4 +26,4 @@ export class Product {
   // discount_endDate: object;
 }
 
-export const ProductSchema = SchemaFactory.createForClass(Product);
+export const CartSchema = SchemaFactory.createForClass(Cart);
