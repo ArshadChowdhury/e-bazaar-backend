@@ -17,6 +17,12 @@ export class Product {
 
   @Prop({ required: true })
   discounted_price: number;
+
+  // @Prop({ required: true })
+  // discount_startDate: object;
+
+  // @Prop({ required: true })
+  // discount_endDate: object;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
