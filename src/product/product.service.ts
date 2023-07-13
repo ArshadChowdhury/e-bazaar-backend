@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Product } from "./schemas/product.schema";
 import * as mongoose from "mongoose";
+import { Query as ExpressQuery } from "express-serve-static-core";
 
 @Injectable()
 export class ProductService {
@@ -10,8 +11,23 @@ export class ProductService {
     private productsModel: mongoose.Model<Product>
   ) {}
 
-  async findAll(): Promise<Product[]> {
-    const allProducts = await this.productsModel.find();
+  async findAll(query: ExpressQuery): Promise<Product[]> {
+    const resultPerPage = 2;
+    const currentPage = Number(query.page) || 1;
+    const skip = resultPerPage * (currentPage - 1);
+
+    const searchParams = query.searchParams
+      ? {
+          name: {
+            $regex: query.searchParams,
+            $options: "i",
+          },
+        }
+      : {};
+    const allProducts = await this.productsModel
+      .find({ ...searchParams })
+      .limit(resultPerPage)
+      .skip(skip);
     return allProducts;
   }
 

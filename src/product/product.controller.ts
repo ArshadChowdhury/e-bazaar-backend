@@ -1,15 +1,16 @@
-import { Body, Controller, Get, Param, Post, Delete } from "@nestjs/common";
+import { Body, Controller, Get, Param, Post, Delete, Query } from "@nestjs/common";
 import { ProductService } from "./product.service";
 import { Product } from "./schemas/product.schema";
 import { CreateProductDto } from "./dto/create-newProduct.dto";
+import { Query as ExpressQuery } from "express-serve-static-core";
 
 @Controller("products")
 export class ProductsController {
   constructor(private productService: ProductService) {}
 
   @Get("all-products")
-  async getAllProducts(): Promise<Product[]> {
-    return this.productService.findAll();
+  async getAllProducts(@Query() query:ExpressQuery): Promise<Product[]> {
+    return this.productService.findAll(query);
   }
 
   @Post("create-product")
