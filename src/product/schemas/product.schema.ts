@@ -9,13 +9,13 @@ export class Product {
   @Prop()
   imageUrl: string;
 
-  @Prop()
+  @Prop({ required: true })
   name: string;
 
-  @Prop()
+  @Prop({ required: true })
   real_price: number;
 
-  @Prop()
+  @Prop({ required: true })
   discounted_price: number;
 }
 
