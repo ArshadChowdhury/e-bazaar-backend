@@ -12,14 +12,14 @@ export class ProductService {
   ) {}
 
   async findAll(query: ExpressQuery): Promise<Product[]> {
-    const resultPerPage = 2;
+    const resultPerPage = 8;
     const currentPage = Number(query.page) || 1;
     const skip = resultPerPage * (currentPage - 1);
 
-    const searchParams = query.searchParams
+    const searchParams = query.search
       ? {
           name: {
-            $regex: query.searchParams,
+            $regex: query.search,
             $options: "i",
           },
         }

@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Param, Post, Delete, Query } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Post,
+  Delete,
+  Query,
+} from "@nestjs/common";
 import { ProductService } from "./product.service";
 import { Product } from "./schemas/product.schema";
 import { CreateProductDto } from "./dto/create-newProduct.dto";
@@ -9,7 +17,7 @@ export class ProductsController {
   constructor(private productService: ProductService) {}
 
   @Get("all-products")
-  async getAllProducts(@Query() query:ExpressQuery): Promise<Product[]> {
+  async getAllProducts(@Query() query: ExpressQuery): Promise<Product[]> {
     return this.productService.findAll(query);
   }
 
@@ -24,7 +32,7 @@ export class ProductsController {
   @Get(":id")
   async findProduct(
     @Param("id")
-    id : string
+    id: string
   ): Promise<Product> {
     return this.productService.findById(id);
   }
@@ -32,9 +40,8 @@ export class ProductsController {
   @Delete("delete/:id")
   async deleteProduct(
     @Param("id")
-    id : string
+    id: string
   ): Promise<Product> {
     return this.productService.deleteById(id);
   }
-
 }
