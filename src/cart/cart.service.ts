@@ -15,16 +15,17 @@ export class CartService {
     return allCartItems;
   }
 
-  async addToCart(cart: Cart): Promise<Cart> {
+  async addToCart(cart: Cart): Promise<any> {
     const newProduct = await this.cartModel.create(cart);
     return newProduct;
+    // }
   }
 
   async editById(id: string, cart: Cart): Promise<Cart> {
-      return await this.cartModel.findByIdAndUpdate(id, cart, {
-        new : true,
-        runValidators:true
-      });
+    return await this.cartModel.findByIdAndUpdate(id, cart, {
+      new: true,
+      runValidators: true,
+    });
   }
 
   async deleteById(id: string): Promise<Cart> {

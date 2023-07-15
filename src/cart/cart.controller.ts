@@ -24,13 +24,13 @@ export class CartController {
   async addToCart(
     @Body()
     cart: Cart
-  ): Promise<Cart> {
+  ): Promise<any> {
     return this.cartService.addToCart(cart);
   }
 
   @Patch("edit/:id")
   async editCartItems(
-    @Body("id")
+    @Param("id")
     id: string,
     @Body()
     cart: UpdateCartDto

@@ -11,16 +11,16 @@ export class Product {
   name: string;
 
   @Prop({ required: true })
-  price: number;
+  price: string;
 
   @Prop({ required: true })
   slug: string;
 
   @Prop({ required: true })
-  discount_startDate: number;
+  discount_startDate: string;
 
   @Prop({ required: true })
-  discount_endDate: number;
+  discount_endDate: string;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);

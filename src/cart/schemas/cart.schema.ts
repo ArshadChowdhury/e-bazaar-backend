@@ -6,6 +6,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 
 export class Cart {
+
   @Prop()
   imageUrl: string;
 
@@ -13,17 +14,16 @@ export class Cart {
   name: string;
 
   @Prop({ required: true })
-  price: number;
-
+  price: string;
 
   @Prop({ required: true })
-  quantity: number;
+  quantity: string;
 
   // @Prop({ required: true })
-  // discount_startDate: object;
+  // discount_startDate: string;
 
   // @Prop({ required: true })
-  // discount_endDate: object;
+  // discount_endDate: string;
 }
 
 export const CartSchema = SchemaFactory.createForClass(Cart);

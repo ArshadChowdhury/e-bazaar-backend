@@ -11,7 +11,7 @@ export class ProductService {
     private productsModel: mongoose.Model<Product>
   ) {}
 
-  async findAll(query: ExpressQuery): Promise<Product[]> {
+  async findAll(query: ExpressQuery): Promise<any> {
     const resultPerPage = 8;
     const currentPage = Number(query.page) || 1;
     const skip = resultPerPage * (currentPage - 1);
@@ -24,11 +24,18 @@ export class ProductService {
           },
         }
       : {};
-    const allProducts = await this.productsModel
+    const allProductsWithParams = await this.productsModel
       .find({ ...searchParams })
       .limit(resultPerPage)
       .skip(skip);
-    return allProducts;
+
+    const allProducts = await this.productsModel.find();
+    const data = {
+      dataCount: allProducts.length,
+      results: allProductsWithParams,
+    };
+
+    return data;
   }
 
   async addNewProduct(product: Product): Promise<Product> {
@@ -40,7 +47,7 @@ export class ProductService {
     const product = await this.productsModel.findById(id);
 
     if (!product) {
-      throw new NotFoundException("Book not found");
+      throw new NotFoundException("Product not found");
     }
 
     return product;

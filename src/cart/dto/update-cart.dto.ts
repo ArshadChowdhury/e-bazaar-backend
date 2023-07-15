@@ -2,9 +2,10 @@
 
 export class UpdateCartDto {
     readonly imageUrl: string;
+    readonly id: string;
     readonly name: string;
-    readonly price: number;
-    readonly quantity: number;
-    // readonly discount_startDate: object;
-    // readonly discount_endDate: object;
+    readonly price: string;
+    readonly quantity: string;
+    readonly  discount_startDate: string;
+    readonly  discount_endDate: string;
   }
