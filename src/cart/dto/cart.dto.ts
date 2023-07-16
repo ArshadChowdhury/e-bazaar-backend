@@ -5,6 +5,4 @@ export class CartDto {
     readonly name: string;
     readonly price: string;
     readonly quantity: number;
-    // readonly  discount_startDate: string;
-    // readonly  discount_endDate: string;
   }

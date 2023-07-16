@@ -7,10 +7,12 @@ import {
   Delete,
   Query,
 } from "@nestjs/common";
+
+import { Query as ExpressQuery } from "express-serve-static-core";
+
+import { CreateProductDto } from "./dto/create-newProduct.dto";
 import { ProductService } from "./product.service";
 import { Product } from "./schemas/product.schema";
-import { CreateProductDto } from "./dto/create-newProduct.dto";
-import { Query as ExpressQuery } from "express-serve-static-core";
 
 @Controller("products")
 export class ProductsController {

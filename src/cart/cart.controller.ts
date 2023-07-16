@@ -7,6 +7,7 @@ import {
   Body,
   Param,
 } from "@nestjs/common";
+
 import { Cart } from "./schemas/cart.schema";
 import { CartService } from "./cart.service";
 import { UpdateCartDto } from "./dto/update-cart.dto";
@@ -24,7 +25,7 @@ export class CartController {
   async addToCart(
     @Body()
     cart: Cart
-  ): Promise<any> {
+  ): Promise<Cart> {
     return this.cartService.addToCart(cart);
   }
 

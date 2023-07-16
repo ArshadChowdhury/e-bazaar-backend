@@ -6,6 +6,4 @@ export class UpdateCartDto {
     readonly name: string;
     readonly price: string;
     readonly quantity: string;
-    readonly  discount_startDate: string;
-    readonly  discount_endDate: string;
   }

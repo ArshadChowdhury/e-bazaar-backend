@@ -16,10 +16,10 @@ export class Product {
   @Prop({ required: true })
   slug: string;
 
-  @Prop({ required: true })
+  @Prop()
   discount_startDate: string;
 
-  @Prop({ required: true })
+  @Prop()
   discount_endDate: string;
 }
 
