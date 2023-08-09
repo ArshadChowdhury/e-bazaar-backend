@@ -1,7 +1,7 @@
 ## Routes
 
 ```
-Get all products - https://e-bazaar-backend.up.railway.app/products/all-products
+Get all products - <a href="https://e-bazaar-backend.up.railway.app/products/all-products">https://e-bazaar-backend.up.railway.app/products/all-products</a>
 Get all cart items - https://e-bazaar-backend.up.railway.app/cart/all-cartItems
 ```
 
