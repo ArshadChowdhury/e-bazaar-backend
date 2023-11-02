@@ -1,8 +1,8 @@
 ## Get Routes
 
 ```
-Get all products - https://e-bazaar-backend.up.railway.app/products/all-products
-Get all cart items - https://e-bazaar-backend.up.railway.app/cart/all-cartItems
+Get all products - https://e-bazaar-backend-aabp.onrender.com/products/all-products
+Get all cart items - https://e-bazaar-backend-aabp.onrender.com/cart/all-cartItems
 ```
 
 ## Installation
