@@ -1,6 +1,6 @@
 
-# E bazaar frontend
-## A small e-commerce project to Add new products, Search products, Add/Edit quantity/Delete products from cart.
+# E-bazaar backend
+## A small backend e-commerce project to Add new products, Search products, Paginate, Add/Edit quantity/Delete products from cart.
 
 
 ## Api GET Routes
