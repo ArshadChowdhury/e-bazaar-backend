@@ -1,7 +1,7 @@
 
 # E-bazaar backend
-## Backend of an e-commerce project to Add new products, Search products, Paginate, Add/Edit quantity/Delete products from cart.
 
+Backend of an e-commerce project to Add new products, Search products, Paginate, Add/Edit quantity/Delete products from cart.
 
 ## Live API GET Routes
 
@@ -12,14 +12,15 @@ Get all cart items - https://e-bazaar-backend.vercel.app/cart/all-cartItems
 
 ## Here's a glimpse of this app -
 
-![image](https://github.com/ArshadChowdhury/e-bazaar-frontend/assets/86738490/02adf7a5-cb34-457f-900a-b10eb94aff86)
+![image](https://github.com/ArshadChowdhury/e-bazaar-backend/assets/86738490/3895ea51-07db-44fe-b988-e981e385bdb9)
+
 
 # Tech Stack - 
 
-### Nest.js with TypeScript
-### MongoDB
-### Next.js with TypeScript (for frontend)
-### TailwindCSS (for frontend)
+Nest.js with TypeScript <br>
+MongoDB <br>
+Next.js with TypeScript (for frontend) <br>
+TailwindCSS (for frontend) <br>
 
 # Getting started locally -
 
