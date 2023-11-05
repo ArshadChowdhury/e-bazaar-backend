@@ -10,6 +10,9 @@ Get all products - https://e-bazaar-backend.vercel.app/products/all-products
 Get all cart items - https://e-bazaar-backend.vercel.app/cart/all-cartItems
 ```
 
+## Here's a glimpse of this app -
+
+![image](https://github.com/ArshadChowdhury/e-bazaar-frontend/assets/86738490/02adf7a5-cb34-457f-900a-b10eb94aff86)
 
 # Tech Stack - 
 
