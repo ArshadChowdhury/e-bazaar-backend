@@ -1,7 +1,7 @@
 
 # E-bazaar backend
 
-Backend of an e-commerce project to Add new products, Search products, Paginate, Add/Edit quantity/Delete products from cart.
+Backend of an e-commerce project to add new products, search products, paginate, add/edit quantity/delete products from cart.
 
 ## Live API GET Routes
 
@@ -26,15 +26,6 @@ TailwindCSS (for frontend) <br>
 
 First you'll need to clone this project, run ```npm install``` or ```yarn install``` and then run the development server by running
 
-## Installation
-
-```bash
-$ npm install
-# or
-$ yarn install
-```
-
-## Running the app
 
 ```bash
 # development
@@ -47,3 +38,5 @@ $ npm run start:dev
 # or
 $ yarn start:dev
 ```
+
+Then open http://localhost:3000 with your browser and go to any of the live api get routes above to see the result.
