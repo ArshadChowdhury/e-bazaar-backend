@@ -3,7 +3,9 @@
 ## A small backend e-commerce project to Add new products, Search products, Paginate, Add/Edit quantity/Delete products from cart.
 
 
-## Api GET Routes
+## Live API GET Routes
+
+## ** Might have to try a few times to access the live link as the backend is hosted on render and render servers shut down if there's inactivity **
 
 ```
 Get all products - https://e-bazaar-backend-aabp.onrender.com/products/all-products
