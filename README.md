@@ -33,7 +33,9 @@ git clone https://github.com/ArshadChowdhury/e-bazaar-backend.git
 then change directory to ```e-bazaar-backend``` folder then run
 
 ```bash
-npm install``` or ```yarn install
+$ npm install
+# or
+$ yarn install
 ```
 and then run the development server by running
 
